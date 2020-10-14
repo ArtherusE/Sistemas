@@ -1,5 +1,7 @@
 package mx.uv.sw80640;
+
 import static spark.Spark.*;
+
 /**
  * Hello world!
  *
@@ -7,9 +9,10 @@ import static spark.Spark.*;
 public class App 
 {
     public static void main( String[] args )
-    {   
+    {
         port(2020);
-        get("/", (req, res) -> "Hola desde Spark");//Primero es un path, y despues una expresion landa(funcion anonima con una peticion y una respuesta)
-        get("/Adios", (req, res) -> "Adios desde Spark");
+        get("/", (req, res) -> "Hola desde Spark");
+        get("/hola", (req, res) -> "Hola hola");
+        get("/adios", (req, res) -> "Adios desde Spark");
     }
 }
