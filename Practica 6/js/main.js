@@ -5,7 +5,7 @@ blogeo.addEventListener("click", function() {
     const parametros = new URLSearchParams();
     parametros.append("PrmEmail", email);
     parametros.append("PrmPassword", pass);
-   axios.get("http://127.0.0.1:5500?/hola"+parametros)
+   axios.post('http://localhost/adios' + parametros)
     .then(function(response) {
         console.log(response);
         console.log("contenido: " + response.data);
